@@ -12,7 +12,6 @@ func configInitializer(a golly.Application) error {
 			"http://localhost:3000",
 			"http://localhost:*",
 			"http://127.0.0.1:*",
-			"https://*.slim.loans",
 		},
 		"headers": []string{
 			"Accept",
