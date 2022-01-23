@@ -2,9 +2,14 @@ package initializers
 
 import "github.com/slimloans/golly"
 
+func configPreboot() error {
+	golly.SetName("skeleton")
+	golly.SetVersion(0, 0, 1, "")
+	return nil
+}
+
 // ConfigInitializer initializes various config options
 func configInitializer(a golly.Application) error {
-	a.Config.SetDefault("bind", ":9002")
 
 	// Cors config
 	a.Config.Set("cors", map[string]interface{}{

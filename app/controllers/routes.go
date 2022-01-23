@@ -10,7 +10,7 @@ import (
 )
 
 // Routes is the entry point to the systems routes
-func Routes(a golly.Application) {
+func Initializer(a golly.Application) error {
 	a.Routes().
 		Use(middleware.Recoverer, middleware.RequestLogger).
 		Use(middleware.Cors(middleware.CorsOptions{
@@ -22,4 +22,5 @@ func Routes(a golly.Application) {
 		Namespace("/", func(r *golly.Route) {
 			r.Get("/status", func(wctx golly.WebContext) { wctx.RenderStatus(http.StatusOK) })
 		})
+	return nil
 }

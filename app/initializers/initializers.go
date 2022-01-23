@@ -7,16 +7,13 @@ import (
 
 // Preboots lists the preboots
 var Preboots = []golly.PrebootFunc{
-	func() error {
-		golly.SetName("skeleton")
-		golly.SetVersion(0, 0, 1, "")
-		return nil
-	},
+	configPreboot,
 }
 
 // Initializers default app initializers - not sure if i like this yet
 // id like eto keep the seperated for cleanliness
 var Initializers = []golly.InitializerFunc{
+	configInitializer,
 	// orm.Initializer,
-	func(a golly.Application) error { controllers.Routes(a); return nil },
+	controllers.Initializer,
 }
