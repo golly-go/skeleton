@@ -3,17 +3,17 @@ package main
 import (
 	"github.com/slimloans/golly"
 	"github.com/slimloans/golly-skeleton/app/initializers"
-	"github.com/slimloans/golly/orm/migrate"
+	"github.com/slimloans/golly/plugins/redis"
 	"github.com/spf13/cobra"
 )
 
 var commands = append(golly.AppCommands,
 	[]*cobra.Command{
-		addNestedChildCommand(&cobra.Command{
-			Use:              "migration",
-			Short:            "Migration commands",
-			TraverseChildren: true,
-		}, migrate.Commands),
+		{
+			Use:   "consumers",
+			Short: "Run Consumers",
+			Run:   func(cmd *cobra.Command, args []string) { redis.Run() },
+		},
 	}...)
 
 func main() {
@@ -26,9 +26,4 @@ func main() {
 	if err := rootCMD.Execute(); err != nil {
 		panic(err)
 	}
-}
-
-func addNestedChildCommand(root *cobra.Command, cmds []*cobra.Command) *cobra.Command {
-	root.AddCommand(cmds...)
-	return root
 }

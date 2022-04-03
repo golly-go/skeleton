@@ -5,6 +5,8 @@ import (
 
 	"net/http"
 
+	"github.com/slimloans/golly/plugins/gql"
+
 	"github.com/slimloans/golly"
 	"github.com/slimloans/golly/middleware"
 )
@@ -19,6 +21,7 @@ func Initializer(a golly.Application) error {
 			AllowedMethods:   a.Config.GetStringSlice("cors.methods"),
 			AllowCredentials: true,
 		})).
+		Mount("graphql", gql.NewGraphQL()).
 		Namespace("/", func(r *golly.Route) {
 			r.Get("/status", func(wctx golly.WebContext) { wctx.RenderStatus(http.StatusOK) })
 		})
