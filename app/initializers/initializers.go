@@ -3,13 +3,12 @@ package initializers
 import (
 	"github.com/slimloans/golly"
 	"github.com/slimloans/golly-skeleton/app/controllers"
-	"github.com/slimloans/golly/plugins/redis"
 )
 
 // Preboots lists the preboots
 var Preboots = []golly.PrebootFunc{
 	configPreboot,
-	redis.Preboot,
+	// redis.Preboot,
 }
 
 // Initializers default app initializers - not sure if i like this yet
