@@ -3,7 +3,7 @@ module github.com/slimloans/golly-skeleton
 go 1.17
 
 require (
-	github.com/slimloans/golly v0.0.0-20220724225702-682a75f707e0
+	github.com/slimloans/golly v0.1.1-0.20220724225702-682a75f707e0
 	github.com/spf13/cobra v1.5.0
 )
 
@@ -47,4 +47,4 @@ require (
 	gorm.io/gorm v1.23.8 // indirect
 )
 
-replace github.com/slimloans/golly => ../../slimloans/golly
+// replace github.com/slimloans/golly => ../../slimloans/golly
