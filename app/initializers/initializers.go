@@ -1,8 +1,8 @@
 package initializers
 
 import (
-	"github.com/slimloans/golly"
-	"github.com/slimloans/golly-skeleton/app/controllers"
+	"github.com/golly-go/golly"
+	"github.com/golly-go/skeleton/app/controllers"
 )
 
 // Preboots lists the preboots

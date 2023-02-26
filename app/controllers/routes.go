@@ -5,10 +5,10 @@ import (
 
 	"net/http"
 
-	"github.com/slimloans/golly/plugins/gql"
+	"github.com/golly-go/plugins/gql"
 
-	"github.com/slimloans/golly"
-	"github.com/slimloans/golly/middleware"
+	"github.com/golly-go/golly"
+	"github.com/golly-go/golly/middleware"
 )
 
 // Routes is the entry point to the systems routes

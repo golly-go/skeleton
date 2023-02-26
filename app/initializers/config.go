@@ -1,6 +1,6 @@
 package initializers
 
-import "github.com/slimloans/golly"
+import "github.com/golly-go/golly"
 
 func configPreboot() error {
 	golly.SetName("skeleton")

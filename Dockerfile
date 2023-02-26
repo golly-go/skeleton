@@ -23,4 +23,4 @@ WORKDIR /app
 ENV PORT 3000
 EXPOSE 3000
 
-CMD ["/app/bin/golly-skeleton", "web"]
+CMD ["/app/bin/skeleton", "web"]

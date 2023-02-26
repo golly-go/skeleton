@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/slimloans/golly"
-	"github.com/slimloans/golly-skeleton/app/initializers"
+	"github.com/golly-go/golly"
+	"github.com/golly-go/skeleton/app/initializers"
 	"github.com/spf13/cobra"
 )
 
